@@ -1,5 +1,5 @@
-import { appState } from "../AppState";
-import { Poke } from "../Models/Poke";
+import { appState } from "../AppState.js";
+import { Poke } from "../Models/Poke.js";
 import { pokeApi } from "./AxiosService.js";
 
 class PokesService{
@@ -14,7 +14,7 @@ class PokesService{
 
 
     async getMons(){
-        const res = await pokeApi.get()
+        const res = await pokeApi.get('pokemon?limit=100000&offset=0')
         console.log('[Get Pokemon]', res.data)
         appState.pokemons = res.data.results
     }

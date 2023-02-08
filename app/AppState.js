@@ -13,7 +13,7 @@ class AppState extends EventEmitter {
   /**@type {import('./Models/Poke').Poke | null} */
   poke = null
   /**@type {import('./Models/Poke').Poke[]} */
-  myPoke = []
+  myPokes = []
 
 
 }

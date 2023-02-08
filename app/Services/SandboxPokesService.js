@@ -1,6 +1,6 @@
-import { appState } from "../AppState";
-import { Poke } from "../Models/Poke";
-import { sandboxApi } from "./AxiosService"
+import { appState } from "../AppState.js";
+import { Poke } from "../Models/Poke.js";
+import { sandboxApi } from "./AxiosService.js"
 
 
 
@@ -10,7 +10,7 @@ async getMyPoke(){
     const res = await sandboxApi.get('thomf/pokemon')
     console.log('[Get my Pokemon]', res.data);
 
-    appState.myPoke = res.data.map(p => new Poke(p))
+    appState.myPokes = res.data.map(p => new Poke(p))
 }
 
 async createPoke(){
@@ -18,7 +18,7 @@ async createPoke(){
     console.log('[catching pokemon]', res.data)
 
     let caughtPoke = new Poke(res.data)
-    appState.myPoke.push(caughtPoke)
+    appState.myPokes.push(caughtPoke)
     appState.emit('myPoke')
     appState.poke = caughtPoke
 

@@ -17,19 +17,29 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
+    <nav class="navbar navbar-dark navbar-expand bg-danger text-light no-select">
       <a class="navbar-brand ms-3" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
+        <img src="" height="45" alt="" loading="lazy">
         <span class="ms-2">pokedex</span>
       </a>
+      <button class="btn btn-danger" data-bs-toggle="offcanvas" data-bs-target="#poke-offcanvas">Pokedex</button>
     </nav>
   </header>
   <main>
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <div id="app"></div>
+          <div class="row">
+            <div class="col-12 text-center mt-2">
+              <div class="h1">BULBASAUR</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-center">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png" alt="">
+            </div>
+          </div>
+          <!-- <div id="pokemon"></div> -->
         </div>
       </div>
     </div>
@@ -39,6 +49,23 @@
       <p><small>Made with 💖 by CodeWorks</small></p>
     </div>
   </footer>
+
+
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="poke-offcanvas" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Pokedex</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="container-fluid">
+        <div class="row" id="pokemon">
+          <!-- <div class="col-12 text-center">
+            <button class="btn btn-outline-danger w-100 fw-bold">Acid Arrow</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
     integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
