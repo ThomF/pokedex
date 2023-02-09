@@ -1,10 +1,14 @@
 import { appState } from "../AppState.js";
 import { Poke } from "../Models/Poke.js";
+import { Pop } from "../Utils/Pop.js";
 import { sandboxApi } from "./AxiosService.js"
 
 
 
 class SandboxPokesService{
+setActivePokemon(name) {
+
+}
 
 async getMyPoke(){
     const res = await sandboxApi.get('thomf/pokemon')
@@ -23,6 +27,8 @@ async createPoke(){
     appState.poke = caughtPoke
 
 }
+
+
 
 }
 

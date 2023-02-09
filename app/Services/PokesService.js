@@ -3,6 +3,12 @@ import { Poke } from "../Models/Poke.js";
 import { pokeApi } from "./AxiosService.js";
 
 class PokesService{
+    async setActivePokemon(url) {
+        const res = await pokeApi.get(url)
+        console.log('[getting by url]')
+        appState.poke = new Poke(res.data)
+        console.log('[getting the pokemon]', appState.poke)
+    }
     
     async getPokeByIndex(index){
         const res = await pokeApi.get(index)
