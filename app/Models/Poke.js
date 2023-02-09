@@ -3,7 +3,7 @@ export class Poke{
     constructor(data){
         this.id = data.id || null
         this.name = data.name
-        this.img = data.sprites.front_default
+        this.img = data.sprites.other["official-artwork"].front_default
         this.weight = data.weight
         this.height = data.height 
         this.user = data.user
