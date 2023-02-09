@@ -19,7 +19,7 @@ export class SandboxPokesController{
         console.log('sandbox')
         this.getMyPoke()
 
-        appState.on('myPoke', _drawMyPokemon)
+        appState.on('myPokes', _drawMyPokemon)
     }
 
     async createPoke(){

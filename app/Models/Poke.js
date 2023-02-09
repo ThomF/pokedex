@@ -29,6 +29,7 @@ export class Poke{
         <div class="mt-3 p-5 border border-danger border-5 rounded">
         <h3>Height: ${this.height}</h3>
             <h3>Weight: ${this.weight}</h3>
+            <button onclick="app.sandboxPokesController.createPoke()">Catch</button>
         </div>
         </div>
         `
