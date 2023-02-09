@@ -12,6 +12,7 @@ function _drawPokedex(){
 }
 
 function _drawPokemon(){
+    // @ts-ignore
     setHTML('activePokemon', appState.poke.ActivePokemonTemplate)
 }
 

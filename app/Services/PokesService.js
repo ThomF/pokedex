@@ -10,13 +10,7 @@ class PokesService{
         console.log('[getting the pokemon]', appState.poke)
     }
     
-    async getPokeByIndex(index){
-        const res = await pokeApi.get(index)
-        console.log('[get by index]', res.data)
-
-        appState.poke = new Poke(res.data)
-        console.log('found the pokemon!', appState.poke )
-    }
+    
 
 
     async getMons(){

@@ -7,6 +7,7 @@ export class Poke{
         this.weight = data.weight
         this.height = data.height 
         this.user = data.user
+        this.url = data.url
 
     }
 
@@ -23,11 +24,12 @@ export class Poke{
             
         </div>
         <div class="d-flex justify-content-between">
-            <h3>Height: ${this.height}</h3>
+            
+        </div>
+        <div class="mt-3 p-5 border border-danger border-5 rounded">
+        <h3>Height: ${this.height}</h3>
             <h3>Weight: ${this.weight}</h3>
         </div>
-        <p class="mt-3 p-5 border border-danger border-5 rounded">
-        </p>
         </div>
         `
     }
@@ -38,4 +40,12 @@ export class Poke{
         <button onclick="app.pokesController.setActivePokemon('${poke.url}')" class="btn mb-3 btn-outline-danger w-100 fw-bold">${poke.name}</button>
         </div>`
     }
+    get SandboxPokeListTemplate() {
+        return ` <div class="col-12 text-center">
+        <button onclick="app.pokesController.setActivePokemon('')" class="btn mb-3 btn-outline-danger w-100 fw-bold">${this.name}</button>
+        </div>`
+    }
+
+
+
 }
