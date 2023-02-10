@@ -12,7 +12,7 @@ export class CaughtPoke {
 
     get SandboxPokeListTemplate() {
         return ` <div class="col-12 text-center">
-        <button onclick="app.pokesController.setActivePokemon('')" class="btn mb-3 btn-outline-danger w-100 fw-bold">${this.name}</button>
+        <button onclick="app.pokesController.setActivePokemon()" class="btn mb-3 btn-outline-danger w-100 fw-bold">${this.name}</button>
         </div>`
     }
 

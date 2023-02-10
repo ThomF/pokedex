@@ -25,10 +25,11 @@ async createPoke(){
     console.log('[catching pokemon]', res.data)
 
     let caughtPokemon = new CaughtPoke(res.data)
-    console.log('[new Poke]',caughtPoke)
-    appState.myPokes.push(poke)
+    console.log('[new Poke]', CaughtPoke)
+    appState.myPokes.push(CaughtPoke)
     appState.emit('myPokes')
     appState.myPokes = caughtPokemon
+    // appState.myPokes = caughtPokemon
 
 }
 
