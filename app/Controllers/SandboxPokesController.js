@@ -18,7 +18,7 @@ export class SandboxPokesController{
     constructor(){
         console.log('sandbox')
         this.getMyPoke()
-
+        _drawMyPokemon()
         appState.on('myPokes', _drawMyPokemon)
     }
 
@@ -41,6 +41,7 @@ export class SandboxPokesController{
     }
 
     setActivePokemon(name){
+        console.log('setting active')
         try {
             sandboxPokesService.setActivePokemon(name)
         } catch (error) {
